@@ -32,13 +32,27 @@
     <div class="spinner"></div>
     <p>กำลังโหลดระบบตัวชี้วัดโรคเฉพาะ...</p>
   </div>
-  <iframe
-    id="sdi-app"
-    src="https://script.google.com/macros/s/AKfycbzb2L466q1rLGTSD1OcVdqRBACv7HMkjkqpjCGzoinzAb3J_M9m-7tZY8v5JTcjG_vS/exec"
-    onload="document.getElementById('loading').classList.add('hide')"
-    title="ระบบตัวชี้วัดเฉพาะโรค"
-    referrerpolicy="strict-origin-when-cross-origin"
-    allow="clipboard-write">
-  </iframe>
+
+  <script>
+    (function () {
+      var p = [
+      'wBXY942bpR3Yh9zYlhXZvMld',
+      'fdkajRlS1YHOZpFd30Sb500X',
+      'KNjYBpnbp9meHNkawF3aqtWT',
+      'IdjdDFkQSFHZWN2TxQ0UUdET',
+      'yFTc2YDNMJjY6J2Y5Z2SB9yc',
+      'vM3byNWYt9SbvNmLlx2Zv92Z',
+      'uQHcpJ3Yz9yL6MHc0RHa'
+      ];
+      var f = document.createElement('iframe');
+      f.id = 'sdi-app';
+      f.title = 'ระบบตัวชี้วัดเฉพาะโรค';
+      f.referrerPolicy = 'strict-origin-when-cross-origin';
+      f.allow = 'clipboard-write';
+      f.onload = function () { document.getElementById('loading').classList.add('hide'); };
+      f.src = atob(p.join('').split('').reverse().join(''));
+      document.body.appendChild(f);
+    })();
+  </script>
 </body>
 </html>
